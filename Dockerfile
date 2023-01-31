@@ -16,5 +16,5 @@ RUN mkdir -p /usr/local/lib/guestfs/appliance && \
 
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 
-RUN mkdir -p /usr/local/lib/guestfs
-COPY --from=centos /usr/local/lib/guestfs/appliance /usr/local/lib/guestfs/
+RUN mkdir -p /usr/lib64/guestfs
+COPY --from=centos /usr/local/lib/guestfs/appliance /usr/lib64/guestfs

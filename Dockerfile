@@ -6,7 +6,7 @@ RUN dnf update -y && \
     dnf install -y --setopt=install_weak_deps=False \
         libguestfs-devel
 
-# Create tarball for the appliance. This fixed libguestfs appliance uses the root in qcow2 format as container runtime not always handle correctly sparse files.
+# Create tarball for the appliance.
 RUN mkdir -p /usr/local/lib/guestfs/appliance && \
     cd /usr/local/lib/guestfs/appliance && \
     libguestfs-make-fixed-appliance --xz
